@@ -1,0 +1,120 @@
+Copying a well-formatted table on mobile can be tricky due to limitations in text editors and apps. However, you can try the following method using Markdown syntax to retain the table format, which can be used in many note-taking apps that support Markdown (like Bear, Notion, or even GitHub):
+
+### Data Integration Components
+
+| Talend Component | IICS Equivalent | Description |
+|------------------|------------------|-------------|
+| tInputFlow | Source Transformation | Extract data from a source. |
+| tOutputFlow | Target Transformation | Load data into a target. |
+| tMap | Expression Transformation, Joiner Transformation, Lookup Transformation | Map, transform, and join data. |
+| tFilterRow | Filter Transformation | Filter rows based on conditions. |
+| tAggregateRow | Aggregator Transformation | Perform aggregate calculations. |
+| tJoin | Joiner Transformation | Join data from multiple sources. |
+| tSortRow | Sorter Transformation | Sort data based on specified columns. |
+| tDenormalizeSortedRow | Aggregator Transformation | Denormalize data by aggregating into a single row. |
+| tNormalize | Normalizer Transformation | Split data into multiple rows. |
+| tReplicate | Router Transformation | Replicate data to multiple outputs. |
+| tSetGlobalVar | Set Variable Transformation | Set global variables. |
+| tXMLMap | XML Transformation | Transform XML data. |
+| tFileInputDelimited | Source Transformation | Read data from delimited files. |
+| tFileOutputDelimited | Target Transformation | Write data to delimited files. |
+| tFileInputExcel | Source Transformation | Read data from Excel files. |
+| tFileOutputExcel | Target Transformation | Write data to Excel files. |
+| tMysqlInput | Source Transformation | Extract data from MySQL. |
+| tMysqlOutput | Target Transformation | Load data into MySQL. |
+| tPostgresqlInput | Source Transformation | Extract data from PostgreSQL. |
+| tPostgresqlOutput | Target Transformation | Load data into PostgreSQL. |
+| tOracleInput | Source Transformation | Extract data from Oracle. |
+| tOracleOutput | Target Transformation | Load data into Oracle. |
+| tSalesforceInput | Source Transformation | Extract data from Salesforce. |
+| tSalesforceOutput | Target Transformation | Load data into Salesforce. |
+| tRestClient | REST V2 Connector | Call REST APIs. |
+| tSOAP | Web Services Transformation | Call SOAP APIs. |
+| tFTPGet | FTP Connector | Retrieve files via FTP. |
+| tFTPPut | FTP Connector | Send files via FTP. |
+| tS3Put | Amazon S3 Connector | Upload files to Amazon S3. |
+| tS3Get | Amazon S3 Connector | Download files from Amazon S3. |
+
+### Data Quality Components
+
+| Talend Component | IICS Equivalent | Description |
+|------------------|------------------|-------------|
+| tDqReportRun | Data Quality Transformation | Execute data quality reports. |
+| tMatchGroup | Data Quality Transformation | Group matching records. |
+| tPatternCheck | Data Quality Transformation | Check data patterns. |
+| tStandardizeRow | Data Quality Transformation | Standardize data rows. |
+
+### Big Data Components
+
+| Talend Component | IICS Equivalent | Description |
+|------------------|------------------|-------------|
+| tHiveInput | Hive Connector | Extract data from Hive. |
+| tHiveOutput | Hive Connector | Load data into Hive. |
+| tPigLoad | Pig Connector | Load data in Apache Pig. |
+| tPigStoreResult | Pig Connector | Store results in Apache Pig. |
+| tHDFSInput | HDFS Connector | Read data from HDFS. |
+| tHDFSOutput | HDFS Connector | Write data to HDFS. |
+| tKafkaInput | Kafka Connector | Consume messages from Kafka. |
+| tKafkaOutput | Kafka Connector | Produce messages to Kafka. |
+
+### Data Synchronization Components
+
+| Talend Component | IICS Equivalent | Description |
+|------------------|------------------|-------------|
+| tSyncXML | Data Synchronization Transformation | Synchronize XML data. |
+| tSyncDelimited | Data Synchronization Transformation | Synchronize delimited data. |
+
+### Data Enrichment Components
+
+| Talend Component | IICS Equivalent | Description |
+|------------------|------------------|-------------|
+| tEnrich | Data Enrichment Transformation | Enrich data. |
+| tMap | Lookup Transformation | Perform lookups to enrich data. |
+
+### Utility Components
+
+| Talend Component | IICS Equivalent | Description |
+|------------------|------------------|-------------|
+| tLogRow | Mapping Output | Log data to console. |
+| tWarn | Log Transformation | Log warnings. |
+| tDie | Error Handling Transformation | Terminate job on error. |
+| tJavaRow | Java Transformation | Execute custom Java code. |
+| tSystem | Command Task | Execute system commands. |
+
+### Data Masking Components
+
+| Talend Component | IICS Equivalent | Description |
+|------------------|------------------|-------------|
+| tDataMasking | Data Masking Transformation | Mask sensitive data. |
+
+### ELT Components
+
+| Talend Component | IICS Equivalent | Description |
+|------------------|------------------|-------------|
+| tELTInput | Source Transformation | Extract data for ELT processes. |
+| tELTOutput | Target Transformation | Load data for ELT processes. |
+| tELTMap | Expression Transformation | Transform data for ELT processes. |
+
+### Example of Migration
+
+Let's take a simple example of migrating a Talend job that reads data from a MySQL table, filters rows based on a condition, and writes the data to a CSV file.
+
+**Talend Job**:
+1. **tMysqlInput**: Read data from MySQL.
+2. **tFilterRow**: Filter rows where `age > 30`.
+3. **tFileOutputDelimited**: Write data to a CSV file.
+
+**IICS Mapping**:
+1. **Source Transformation**: Configure a Source transformation to read data from MySQL.
+2. **Filter Transformation**: Configure a Filter transformation with the condition `age > 30`.
+3. **Target Transformation**: Configure a Target transformation to write data to a CSV file.
+
+**Steps**:
+1. **Create a New Mapping** in IICS.
+2. **Add a Source Transformation**: Select the MySQL connection and choose the table to read from.
+3. **Add a Filter Transformation**: Drag and drop the Filter transformation, connect it to the source, and set the filter condition.
+4. **Add a Target Transformation**: Select the file target and configure the output file path and format.
+5. **Validate and Save** the mapping.
+6. **Run the Mapping** to test the data flow.
+
+By copying this Markdown-formatted text, you should retain the table structure in many note-taking apps that support Markdown.
